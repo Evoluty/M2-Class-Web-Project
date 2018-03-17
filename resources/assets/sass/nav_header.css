@@ -1,0 +1,23 @@
+nav {
+  background-color: #3b4c5c;
+  padding: 5px; }
+
+nav a {
+  color: white; }
+
+nav a:hover,
+.nav-pills .show > .nav-link {
+  background-color: #5a6e82;
+  color: white; }
+
+nav a img {
+  height: 10px; }
+
+nav ul li:not(:first-child) {
+  margin-left: 5px; }
+
+nav ul.pull-right li:not(:last-child) {
+  border-right: 1px solid white;
+  padding-right: 5px; }
+
+/*# sourceMappingURL=nav_header.css.map */

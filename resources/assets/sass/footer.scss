@@ -1,0 +1,87 @@
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  .links {
+    min-height: 40px;
+    background-color: rgb(39, 46, 54);
+    color: rgb(142, 143, 145);
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+
+    ul {
+      padding-left: 20px;
+
+      li {
+        list-style: url('/img/ul_list_arrow.png');;
+        a {
+          color: rgb(142, 143, 145);
+          margin-left: 5px;
+        }
+
+        a:hover {
+          color: rgb(142, 143, 145);
+        }
+      }
+    }
+
+    #socials {
+      :nth-child(3), :nth-child(4), :nth-child(8) {
+        img {
+          border-left: 1px solid rgb(142, 143, 145) !important;
+        }
+      }
+    }
+
+    form {
+      margin-bottom: 20px;
+
+      :hover, :active, :focus {
+        outline: 0 !important;
+        outline: none !important;
+        -webkit-appearance:none !important;
+        box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+      }
+
+      input, button {
+        background-color: rgb(39, 46, 54) !important;
+        margin: 0 !important;
+        height: 45px !important;
+        border-radius: 0 !important;
+        border-top: 2px solid rgb(142, 143, 145) !important;
+        border-bottom: 2px solid rgb(142, 143, 145) !important;
+        vertical-align: middle !important;
+      }
+
+      input {
+        border-right: none !important;
+        border-left: 2px solid rgb(142, 143, 145) !important;
+        width: 330px !important;
+        padding-left: 20px !important;
+        color: rgb(142, 143, 145) !important;
+      }
+
+      button {
+        display: inline-block !important;
+        border-right: 2px solid rgb(142, 143, 145) !important;
+        color: white;
+
+        svg {
+          font-size: 2em;
+        }
+      }
+    }
+  }
+
+  .credits {
+    min-height: 50px;
+    line-height: 50px;
+    background-color: rgb(26, 30, 35);
+    color: white;
+  }
+}

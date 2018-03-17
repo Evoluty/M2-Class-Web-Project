@@ -1,0 +1,10 @@
+nav.bot_nav {
+  background-color: #e4e4e4;
+  padding: 5px;
+  border-bottom: 5px solid black; }
+  nav.bot_nav ul li {
+    margin-left: 5px; }
+    nav.bot_nav ul li a {
+      color: black; }
+
+/*# sourceMappingURL=bot_nav.css.map */

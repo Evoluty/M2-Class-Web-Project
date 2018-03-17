@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAY;EACV,gBAAgB,EAAE,OAAkB;EACpC,OAAO,EAAE,GAAG;EACZ,aAAa,EAAE,eAAe;EAG5B,iBAAG;IACD,WAAW,EAAE,GAAG;IAEhB,mBAAE;MACA,KAAK,EAAE,KAAK",
+"sources": ["bot_nav.scss"],
+"names": [],
+"file": "bot_nav.css"
+}
