@@ -24,9 +24,9 @@
     </ul>
 
     <ul class="nav nav-pills pull-right">
-        <li class="nav-item"><a class="nav-link text-white" href="#">My account</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">My Account</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="#">Wishlist</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="#">My cart (<span id="top_nav_cart_number_items">4</span> items)</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">My Cart (<span id="top_nav_cart_number_items">4</span> items)</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="#">Blog</a></li>
         <li class="nav-item"><a class="nav-link text-white" href="#">Log in</a></li>
     </ul>
