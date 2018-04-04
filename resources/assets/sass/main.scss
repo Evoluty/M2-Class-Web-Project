@@ -1,22 +1,12 @@
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 html {
   height: 100%;
   box-sizing: border-box;
 
   body {
-    position: relative;
-    margin: 0;
-    padding-bottom: 20rem;
-    min-height: 100%;
     background-color: white;
 
     main {
-      padding-bottom: 5rem;
+      padding-bottom: 4rem;
 
       h3 {
         color: grey;

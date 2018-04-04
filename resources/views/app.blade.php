@@ -21,13 +21,11 @@
 
     @include('top_nav')
 
-    <div class="container-fluid">
-        @include('header')
-        @include('bot_nav')
-        <main>
-            @yield('content')
-        </main>
-    </div>
+    @include('header')
+    @include('bot_nav')
+    <main>
+        @yield('content')
+    </main>
 
     @include('footer')
 

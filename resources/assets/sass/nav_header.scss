@@ -1,10 +1,15 @@
-.top_nav {
+#top_nav {
   background-color: rgb(59, 76, 92);
-  padding: 5px;
+
+  button.navbar-toggler {
+    color: white;
+    border-radius: 0.2rem;
+    border-color: white;
+  }
 
   a {
     img {
-      height: 10px;
+      height: 0.6rem;
     }
   }
 
@@ -14,25 +19,76 @@
   }
 
   ul {
-    li:not(:first-child) {
-      margin-left: 5px;
-    }
-  }
-
-  ul.pull-right {
-    li:not(:last-child) {
-      border-right: 1px solid white;
-      padding-right: 5px;
-    }
-  }
-
-  .nav-pills {
-    .show {
-      > .nav-link {
-        background-color: rgb(90, 110, 130);
-        color: white;
+    li {
+      a {
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
       }
     }
   }
-}
 
+  @media (min-width: 767px) {
+    ul {
+      li:not(:first-child) {
+        margin-left: 0.3rem;
+      }
+    }
+
+    ul:not(:first-child) {
+      li:not(:last-child) {
+        border-right: 1px solid white;
+        padding-right: 0.3rem;
+      }
+      margin-right: 0 !important;
+    }
+
+    ul.nav-pills {
+      .show {
+        > .nav-link {
+          background-color: rgb(90, 110, 130);
+          color: white;
+        }
+      }
+    }
+  }
+
+  div.dropdown {
+    #logo_number_cart_items {
+      background-color: rgb(223, 194, 65);
+      width: 0.8rem;
+      height: 0.8rem;
+      position: absolute;
+      top: 0;
+      left: 1.3rem;
+      text-align: center;
+      line-height: 0.8rem;
+      border-radius: 3rem;
+      font-size: 0.7rem;
+    }
+
+    button {
+      height: 1.9rem;
+      background-color: rgba(0, 0, 255, 0);
+      align-items: center;
+      color: white;
+
+      img {
+        max-width:100%;
+        max-height:100%;
+      }
+
+      span {
+        margin-left: 0.6rem;
+      }
+    }
+
+    button:hover {
+      border: 1px solid lightgrey;
+    }
+
+    .dropdown-menu {
+      right: 0;
+      left: auto;
+    }
+  }
+}

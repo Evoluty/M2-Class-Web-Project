@@ -9994,19 +9994,6 @@ a.text-dark:focus {
   }
 }
 
-.navbar-laravel {
-  background-color: #fff;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
 html {
   height: 100%;
   -webkit-box-sizing: border-box;
@@ -10014,15 +10001,11 @@ html {
 }
 
 html body {
-  position: relative;
-  margin: 0;
-  padding-bottom: 20rem;
-  min-height: 100%;
   background-color: white;
 }
 
 html body main {
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 }
 
 html body main h3 {
@@ -10033,52 +10016,117 @@ html body main h3 {
   margin-bottom: 3rem;
 }
 
-.top_nav {
+#top_nav {
   background-color: #3b4c5c;
-  padding: 5px;
 }
 
-.top_nav a img {
-  height: 10px;
+#top_nav button.navbar-toggler {
+  color: white;
+  border-radius: 0.2rem;
+  border-color: white;
 }
 
-.top_nav a:hover {
+#top_nav a img {
+  height: 0.6rem;
+}
+
+#top_nav a:hover {
   background-color: #5a6e82;
   color: white;
 }
 
-.top_nav ul li:not(:first-child) {
-  margin-left: 5px;
+#top_nav ul li a {
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
 }
 
-.top_nav ul.pull-right li:not(:last-child) {
-  border-right: 1px solid white;
-  padding-right: 5px;
+@media (min-width: 767px) {
+  #top_nav ul li:not(:first-child) {
+    margin-left: 0.3rem;
+  }
+
+  #top_nav ul:not(:first-child) {
+    margin-right: 0 !important;
+  }
+
+  #top_nav ul:not(:first-child) li:not(:last-child) {
+    border-right: 1px solid white;
+    padding-right: 0.3rem;
+  }
+
+  #top_nav ul.nav-pills .show > .nav-link {
+    background-color: #5a6e82;
+    color: white;
+  }
 }
 
-.top_nav .nav-pills .show > .nav-link {
-  background-color: #5a6e82;
-  color: white;
+#top_nav div.dropdown #logo_number_cart_items {
+  background-color: #dfc241;
+  width: 0.8rem;
+  height: 0.8rem;
+  position: absolute;
+  top: 0;
+  left: 1.3rem;
+  text-align: center;
+  line-height: 0.8rem;
+  border-radius: 3rem;
+  font-size: 0.7rem;
 }
 
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#top_nav div.dropdown button {
+  height: 1.9rem;
+  background-color: rgba(0, 0, 255, 0);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: white;
+}
+
+#top_nav div.dropdown button img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#top_nav div.dropdown button span {
+  margin-left: 0.6rem;
+}
+
+#top_nav div.dropdown button:hover {
+  border: 1px solid lightgrey;
+}
+
+#top_nav div.dropdown .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+header {
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
 }
 
 header #header_logo {
-  height: 140px;
-  width: 275px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  height: 5rem;
+  width: 15rem;
 }
 
-header .col-sm-6 {
+header #header_forms .row {
+  vertical-align: middle;
+}
+
+header div.header_right {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+header div.header_right .row > div {
   padding: 0;
+}
+
+@media (max-width: 767px) {
+  header div.header_right .row > div .form-row {
+    margin: 0 !important;
+  }
 }
 
 header div.header_right form :hover,
@@ -10095,8 +10143,7 @@ header div.header_right form :focus {
 header div.header_right form select,
 header div.header_right form input,
 header div.header_right form button {
-  margin: 0 !important;
-  height: 50px !important;
+  height: 3rem !important;
   border-radius: 0 !important;
   border-top: 1px solid lightgrey !important;
   border-bottom: 1px solid lightgrey !important;
@@ -10106,54 +10153,48 @@ header div.header_right form button {
 header div.header_right form select {
   border-left: 1px solid lightgrey !important;
   border-right: none !important;
-  width: 160px !important;
 }
 
 header div.header_right form input {
   border-right: none !important;
   border-left: none !important;
-  width: 350px !important;
+  -webkit-box-flex: 1 !important;
+      -ms-flex: 1 1 auto !important;
+          flex: 1 1 auto !important;
 }
 
 header div.header_right form button {
   border-right: 1px solid lightgrey !important;
-}
-
-header div.header_right div.dropdown {
-  margin-left: 5px;
-  margin-right: 15px;
+  background-color: white !important;
 }
 
 header div.header_right div.dropdown #logo_number_cart_items {
   background-color: #dfc241;
-  width: 23px;
-  height: 23px;
+  width: 1.5rem;
+  height: 1.5rem;
   position: absolute;
-  top: -7px;
-  left: 35px;
+  top: -0.7rem;
+  left: 2rem;
   text-align: center;
-  line-height: 20px;
-  border-radius: 12px;
+  line-height: 1.5rem;
+  border-radius: 3rem;
 }
 
 header div.header_right div.dropdown button {
-  height: 50px !important;
+  height: 3rem !important;
   background-color: rgba(0, 0, 255, 0);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 header div.header_right div.dropdown button img {
-  height: 40px;
-  width: 40px;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 header div.header_right div.dropdown button span {
-  margin-left: 10px;
+  margin-left: 0.6rem;
 }
 
 header div.header_right div.dropdown button:hover {
@@ -10162,12 +10203,25 @@ header div.header_right div.dropdown button:hover {
 
 nav.bot_nav {
   background-color: #e4e4e4;
-  padding: 5px;
+  padding: 0.4%;
   border-bottom: 5px solid black;
 }
 
 nav.bot_nav ul li {
-  margin-left: 5px;
+  margin-left: 0.2em;
+}
+
+@media (max-width: 767px) {
+  nav.bot_nav ul li {
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+  }
+
+  nav.bot_nav ul li a {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 0.8rem !important;
+  }
 }
 
 nav.bot_nav ul li a {
@@ -10179,24 +10233,16 @@ nav.bot_nav ul li a:hover {
   color: #6e6e6e;
 }
 
-footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
 footer .links {
-  min-height: 40px;
   background-color: #272e36;
   color: #8e8f91;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 20px;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  padding-left: 3rem;
 }
 
 footer .links ul {
-  padding-left: 20px;
+  padding-left: 1.5rem;
 }
 
 footer .links ul li {
@@ -10205,7 +10251,7 @@ footer .links ul li {
 
 footer .links ul li a {
   color: #8e8f91;
-  margin-left: 5px;
+  margin-left: 0.6rem;
 }
 
 footer .links ul li a:hover {
@@ -10219,7 +10265,7 @@ footer .links #socials :nth-child(8) img {
 }
 
 footer .links form {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 footer .links form :hover,
@@ -10236,8 +10282,7 @@ footer .links form :focus {
 footer .links form input,
 footer .links form button {
   background-color: #272e36 !important;
-  margin: 0 !important;
-  height: 45px !important;
+  height: 2.8rem !important;
   border-radius: 0 !important;
   border-top: 2px solid #8e8f91 !important;
   border-bottom: 2px solid #8e8f91 !important;
@@ -10247,15 +10292,18 @@ footer .links form button {
 footer .links form input {
   border-right: none !important;
   border-left: 2px solid #8e8f91 !important;
-  width: 330px !important;
   padding-left: 20px !important;
   color: #8e8f91 !important;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 footer .links form button {
   display: inline-block !important;
   border-right: 2px solid #8e8f91 !important;
   color: white;
+  margin-right: 3rem;
 }
 
 footer .links form button svg {
@@ -10263,8 +10311,8 @@ footer .links form button svg {
 }
 
 footer .credits {
-  min-height: 50px;
-  line-height: 50px;
+  min-height: 3rem;
+  line-height: 3rem;
   background-color: #1a1e23;
   color: white;
 }
@@ -10306,9 +10354,9 @@ table tr td:nth-child(5) {
 }
 
 table tbody td input {
-  width: 60px;
-  height: 50px;
-  line-height: 50px;
+  width: 3rem;
+  height: 3rem;
+  line-height: 1rem;
   border: 1px solid lightgrey !important;
   text-align: center;
 }
@@ -10326,7 +10374,7 @@ table tbody td input:focus {
 
 table tbody td:nth-child(2) > div:nth-child(2) {
   position: absolute;
-  bottom: 5px;
+  bottom: 0.5rem;
 }
 
 table tbody td:nth-child(2) > div:nth-child(2) .dropdown-menu {

@@ -13888,6 +13888,8 @@ var app = new Vue({
   el: '#app'
 });
 
+__webpack_require__(48);
+
 /***/ }),
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -47329,6 +47331,27 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+    var topNavCollapser = $('#top_nav_collapser');
+    var topNavCart = $('#top_nav_cart');
+
+    topNavCollapser.click(function () {
+        if (topNavCart.css('display') !== 'none') {
+            topNavCart.attr('style', 'display:none !important');
+        } else {
+            topNavCart.attr('style', 'display:block !important');
+        }
+    });
+});
 
 /***/ })
 /******/ ]);

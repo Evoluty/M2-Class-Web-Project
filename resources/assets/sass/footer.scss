@@ -1,25 +1,19 @@
 footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
   .links {
-    min-height: 40px;
     background-color: rgb(39, 46, 54);
     color: rgb(142, 143, 145);
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 20px;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    padding-left: 3rem;
 
     ul {
-      padding-left: 20px;
+      padding-left: 1.5rem;
 
       li {
         list-style: url('/img/ul_list_arrow.png');;
         a {
           color: rgb(142, 143, 145);
-          margin-left: 5px;
+          margin-left: 0.6rem;
         }
 
         a:hover {
@@ -37,7 +31,7 @@ footer {
     }
 
     form {
-      margin-bottom: 20px;
+      margin-bottom: 1rem;
 
       :hover, :active, :focus {
         outline: 0 !important;
@@ -50,8 +44,7 @@ footer {
 
       input, button {
         background-color: rgb(39, 46, 54) !important;
-        margin: 0 !important;
-        height: 45px !important;
+        height: 2.8rem !important;
         border-radius: 0 !important;
         border-top: 2px solid rgb(142, 143, 145) !important;
         border-bottom: 2px solid rgb(142, 143, 145) !important;
@@ -61,15 +54,16 @@ footer {
       input {
         border-right: none !important;
         border-left: 2px solid rgb(142, 143, 145) !important;
-        width: 330px !important;
         padding-left: 20px !important;
         color: rgb(142, 143, 145) !important;
+        flex: 1 1 auto;
       }
 
       button {
         display: inline-block !important;
         border-right: 2px solid rgb(142, 143, 145) !important;
         color: white;
+        margin-right: 3rem;
 
         svg {
           font-size: 2em;
@@ -79,8 +73,8 @@ footer {
   }
 
   .credits {
-    min-height: 50px;
-    line-height: 50px;
+    min-height: 3rem;
+    line-height: 3rem;
     background-color: rgb(26, 30, 35);
     color: white;
   }

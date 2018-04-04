@@ -36,9 +36,13 @@
         </div>
         <div class="col-sm-4 container">
             <h4>Newsletter Signup</h4>
-                {{ Form::open(array('url' => '')) }}
-                    <input type="text" name="email"><!--
-                    --><button class="btn btn-default" type="submit"><i class="far fa-envelope"></i></button>
+                {{ Form::open(array('url' => '', 'class' => 'form-group')) }}
+                    <div class="input-group">
+                        <input type="text" name="email">
+                        <button class="btn btn-default input-group-append" type="submit">
+                            <i class="far fa-envelope"></i>
+                        </button>
+                    </div>
                 {{ Form::close() }}
             <h4>Follow Us</h4>
             <span id="socials">
