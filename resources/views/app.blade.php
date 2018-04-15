@@ -8,21 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Famous Fashion Store - @yield('title')</title>
-    <link rel="icon" href="http://www.clker.com/cliparts/d/d/A/1/m/i/texas-star-hi.png" />
 
     <!-- Styles -->
     <link href="css/app.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="http://www.clker.com/cliparts/d/d/A/1/m/i/texas-star-hi.png"/>
     <!-- Defered scripts -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+            integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+            crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div id='app'></div>
 
     @include('top_nav')
-
     @include('header')
     @include('bot_nav')
+
     <main>
         @yield('content')
     </main>

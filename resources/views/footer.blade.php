@@ -34,17 +34,21 @@
                 </div>
             </div>
         </div>
+
         <div class="col-sm-4 container">
             <h4>Newsletter Signup</h4>
-                {{ Form::open(array('url' => '', 'class' => 'form-group')) }}
-                    <div class="input-group">
-                        <input type="text" name="email">
-                        <button class="btn btn-default input-group-append" type="submit">
-                            <i class="far fa-envelope"></i>
-                        </button>
-                    </div>
-                {{ Form::close() }}
+
+            {{ Form::open(array('url' => '', 'class' => 'form-group', 'id' => 'newsletter-form')) }}
+            <div class="input-group">
+                <input type="text" name="email">
+                <button class="btn btn-default input-group-append" type="submit">
+                    <i class="far fa-envelope"></i>
+                </button>
+            </div>
+            {{ Form::close() }}
+
             <h4>Follow Us</h4>
+
             <span id="socials">
                 <a href="#">{{ HTML::image('img/fb.png', 'fb') }}</a>
                 <a href="#">{{ HTML::image('img/twitter.png', 'twitter') }}</a>
@@ -66,5 +70,4 @@
             {{ HTML::image('img/credit_cards.png', 'logo') }}
         </div>
     </div>
-
 </footer>

@@ -6,6 +6,10 @@ footer {
     padding-bottom: 2rem;
     padding-left: 3rem;
 
+    @media (max-width: 576px) {
+      padding-left: 0.6rem;
+    }
+
     ul {
       padding-left: 1.5rem;
 
@@ -26,6 +30,9 @@ footer {
       :nth-child(3), :nth-child(4), :nth-child(8) {
         img {
           border-left: 1px solid rgb(142, 143, 145) !important;
+        }
+        @media (max-width: 576px) {
+          flex: 1 1 auto !important;
         }
       }
     }
@@ -54,9 +61,10 @@ footer {
       input {
         border-right: none !important;
         border-left: 2px solid rgb(142, 143, 145) !important;
-        padding-left: 20px !important;
+        padding-left: 1em !important;
         color: rgb(142, 143, 145) !important;
-        flex: 1 1 auto;
+        flex: 1 1 auto !important;
+        max-width: 20rem !important;
       }
 
       button {
@@ -64,6 +72,10 @@ footer {
         border-right: 2px solid rgb(142, 143, 145) !important;
         color: white;
         margin-right: 3rem;
+
+        @media (max-width: 576px) {
+          margin-right: 0 !important;
+        }
 
         svg {
           font-size: 2em;
