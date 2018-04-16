@@ -26,6 +26,7 @@ table {
     td:nth-child(4), td:nth-child(5), td:nth-child(6) {
       font-size: 1.3rem;
       font-weight: bold;
+      line-height: 2.8rem;
     }
 
     td:nth-child(5) {
@@ -121,6 +122,13 @@ div.suggestions {
     width: 15rem;
     height: 15rem;
     margin-bottom: 1.5rem;
+  }
+
+  .dropdown-menu {
+    .dropdown-item:hover {
+      background-color: #e0e0e0;
+      color: #282828;
+    }
   }
 
   button {

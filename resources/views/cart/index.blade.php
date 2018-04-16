@@ -11,7 +11,7 @@
         <div class="container-fluid">
             <table class="table">
                 <thead>
-                <tr class="row">
+                <tr class="row d-none d-sm-flex">
                     <th class="col-sm-2">PRODUCT IMAGE</th>
                     <th class="col-sm-5">PRODUCT NAME</th>
                     <th class="col-sm-1">QTY</th>
@@ -22,8 +22,8 @@
                 </thead>
                 <tbody>
                 <tr class="row">
-                    <td class="col-sm-2"><img src="http://bit.ly/2IB4TLA" alt=""></td>
-                    <td class="col-sm-5">
+                    <td class="col-sm-2 col-6"><img src="http://bit.ly/2IB4TLA" alt=""></td>
+                    <td class="col-sm-5 col-6">
                         <div>Lorem ipsum</div>
                         <div class="dropdown">
                             <button type="button" class="btn btn-light" data-toggle="dropdown" href="#"
@@ -36,20 +36,20 @@
                             </div>
                         </div>
                     </td>
-                    <td class="col-sm-1">
+                    <td class="col-sm-1 col-3">
                         <div><input type="text" name="keyword" value="3"></div>
                         <div>
                             <a href="#"><i class="fas fa-edit"></i></a>
                             <a href="#"><i class="fas fa-trash-alt"></i>Remove Item</a>
                         </div>
                     </td>
-                    <td class="col-sm-1">$10.00</td>
-                    <td class="col-sm-1">=</td>
-                    <td class="col-sm-2">$30.00</td>
+                    <td class="col-sm-1 col-2">$10.00</td>
+                    <td class="col-sm-1 col-3">=</td>
+                    <td class="col-sm-2 col-4">$30.00</td>
                 </tr>
                 <tr class="row">
-                    <td class="col-sm-2"><img src="http://bit.ly/2FLfJkc" alt=""></td>
-                    <td class="col-sm-5">
+                    <td class="col-sm-2 col-6"><img src="http://bit.ly/2FLfJkc" alt=""></td>
+                    <td class="col-sm-5 col-6">
                         <div>Ut fringilla nec sem</div>
                         <div class="dropdown">
                             <button type="button" class="btn btn-light" data-toggle="dropdown" href="#"
@@ -62,16 +62,16 @@
                             </div>
                         </div>
                     </td>
-                    <td class="col-sm-1">
+                    <td class="col-sm-1 col-3">
                         <div><input type="text" name="keyword" value="1"></div>
                         <div>
                             <a href="#"><i class="fas fa-edit"></i></a>
                             <a href="#"><i class="fas fa-trash-alt"></i>Remove Item</a>
                         </div>
                     </td>
-                    <td class="col-sm-1">$445.00</td>
-                    <td class="col-sm-1">=</td>
-                    <td class="col-sm-2">$445.00</td>
+                    <td class="col-sm-1 col-2">$445.00</td>
+                    <td class="col-sm-1 col-3">=</td>
+                    <td class="col-sm-2 col-4">$445.00</td>
                 </tr>
                 <tr class="row">
                     <td class="col-sm-12">
