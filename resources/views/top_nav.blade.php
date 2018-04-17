@@ -34,7 +34,22 @@
             <li class="nav-item"><a class="nav-link text-white" href="#">Wishlist</a></li>
             <li class="nav-item"><a class="nav-link text-white" href="#">My Cart (<span id="top_nav_cart_number_items">4</span> items)</a></li>
             <li class="nav-item"><a class="nav-link text-white" href="#">Blog</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#">Log in</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link text-white text-white" data-toggle="dropdown" href="#" role="button"
+                   aria-haspopup="true" aria-expanded="false">Log in</a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#">{{ Auth::user()->name }}</a>
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                       onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
+                    </a>
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </div>
+            </li>
         </ul>
     </div>
 

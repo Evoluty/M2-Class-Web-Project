@@ -1,0 +1,37 @@
+.auth {
+  background-color: #f6f6f6 !important;
+
+  img {
+    width: 9rem;
+    height: 3.2rem;
+  }
+
+  nav {
+    background-color: #3b4c5c;
+    a {
+      color: white !important;
+    }
+  }
+
+  .card-header {
+    background-color: #dedede !important;
+  }
+
+  .card-body {
+    color: #505c6b !important;
+
+    button:first-child {
+      background-color: #505c6b !important;
+      border-color: #596779 !important;
+    }
+
+    button:first-child:active, button:first-child:focus {
+      background-color: #637285 !important;
+      border-color: #8294af !important;
+    }
+
+    a {
+      color: #505c6b !important;
+    }
+  }
+}
