@@ -32,7 +32,7 @@
         <ul class="navbar-nav mr-auto nav-pills">
             <li class="nav-item"><a class="nav-link text-white" href="#">My Account</a></li>
             <li class="nav-item"><a class="nav-link text-white" href="#">Wishlist</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="/cart">My Cart (<span id="top_nav_cart_number_items">4</span> items)</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="/cart">My Cart (<span id="top_nav_cart_number_items">{{$cartNumberItems}}</span> items)</a></li>
             <li class="nav-item"><a class="nav-link text-white" href="#">Blog</a></li>
             <li class="nav-item dropdown">
                 <a class="nav-link text-white text-white" data-toggle="dropdown" href="#" role="button"
@@ -54,7 +54,7 @@
     </div>
 
     <div class="btn-group dropdown d-block d-sm-none" id="top_nav_cart">
-        <div id="logo_number_cart_items">4</div>
+        <div id="logo_number_cart_items">{{$cartNumberItems}}</div>
         <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-shopping-cart"></i>
         </button>

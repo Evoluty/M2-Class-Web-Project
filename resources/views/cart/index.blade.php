@@ -21,10 +21,16 @@
                 </tr>
                 </thead>
                 <tbody>
+
+                @if(empty($cartProducts))
+                    <tr class="row justify-content-center"><td class="col-sm-2">EMPTY CART</td></tr>
+                @endif
+
+                @foreach($cartProducts as $product)
                 <tr class="row">
                     <td class="col-sm-2 col-6"><img src="http://bit.ly/2IB4TLA" alt=""></td>
                     <td class="col-sm-5 col-6">
-                        <div>Lorem ipsum</div>
+                        <div>{{$product->name}}</div>
                         <div class="dropdown">
                             <button type="button" class="btn btn-light" data-toggle="dropdown" href="#"
                                     role="button" aria-haspopup="true" aria-expanded="false">
@@ -43,36 +49,12 @@
                             <a href="#"><i class="fas fa-trash-alt"></i>Remove Item</a>
                         </div>
                     </td>
-                    <td class="col-sm-1 col-2">$10.00</td>
+                    <td class="col-sm-1 col-2">${{$product->price}}</td>
                     <td class="col-sm-1 col-3">=</td>
                     <td class="col-sm-2 col-4">$30.00</td>
                 </tr>
-                <tr class="row">
-                    <td class="col-sm-2 col-6"><img src="http://bit.ly/2FLfJkc" alt=""></td>
-                    <td class="col-sm-5 col-6">
-                        <div>Ut fringilla nec sem</div>
-                        <div class="dropdown">
-                            <button type="button" class="btn btn-light" data-toggle="dropdown" href="#"
-                                    role="button" aria-haspopup="true" aria-expanded="false">
-                                Show Options <i class="fas fa-angle-down"></i>
-                            </button>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Option1</a>
-                                <a class="dropdown-item" href="#">Option2</a>
-                            </div>
-                        </div>
-                    </td>
-                    <td class="col-sm-1 col-3">
-                        <div><input type="text" name="keyword" value="1"></div>
-                        <div>
-                            <a href="#"><i class="fas fa-edit"></i></a>
-                            <a href="#"><i class="fas fa-trash-alt"></i>Remove Item</a>
-                        </div>
-                    </td>
-                    <td class="col-sm-1 col-2">$445.00</td>
-                    <td class="col-sm-1 col-3">=</td>
-                    <td class="col-sm-2 col-4">$445.00</td>
-                </tr>
+                @endforeach
+
                 <tr class="row">
                     <td class="col-sm-12">
                         <button class="btn btn-default" type="submit">ORDER SHOPPING CARD</button>

@@ -13,10 +13,9 @@
 
 Auth::routes();
 
-Route::get('/', function() {
-    return view('home.index');
-})->middleware('auth');
+Route::get('/', 'HomeController@render')->middleware('auth');
 
-Route::get('/cart', function () {
-    return view('cart.index');
-})->middleware('auth');
+Route::get('/cart', 'CartController@render')->middleware('auth');
+Route::post('/cart/{itemId}', 'CartController@addItem')->middleware('auth');
+Route::delete('/cart', 'CartController@empty')->middleware('auth');
+Route::delete('/cart/{itemId}', 'CartController@deleteItem')->middleware('auth');
