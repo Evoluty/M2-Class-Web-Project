@@ -90,5 +90,10 @@
       right: 0;
       left: auto;
     }
+
+    a.dropdown-item:hover {
+      background-color: #f5f5f5;
+      color: black;
+    }
   }
 }

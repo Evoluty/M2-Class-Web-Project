@@ -32,7 +32,7 @@
         <ul class="navbar-nav mr-auto nav-pills">
             <li class="nav-item"><a class="nav-link text-white" href="#">My Account</a></li>
             <li class="nav-item"><a class="nav-link text-white" href="#">Wishlist</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="#">My Cart (<span id="top_nav_cart_number_items">4</span> items)</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="/cart">My Cart (<span id="top_nav_cart_number_items">4</span> items)</a></li>
             <li class="nav-item"><a class="nav-link text-white" href="#">Blog</a></li>
             <li class="nav-item dropdown">
                 <a class="nav-link text-white text-white" data-toggle="dropdown" href="#" role="button"

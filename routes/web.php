@@ -13,6 +13,10 @@
 
 Auth::routes();
 
-Route::get('/', function () {
+Route::get('/', function() {
+    return view('home.index');
+})->middleware('auth');
+
+Route::get('/cart', function () {
     return view('cart.index');
 })->middleware('auth');

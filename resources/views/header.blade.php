@@ -1,7 +1,7 @@
 <header class="container-fluid">
     <div class="row">
         <div class="col-sm-6 col-xs-12 d-none d-sm-block">
-            <a href="#">{{ HTML::image('img/logo.png', 'logo', array('id' => 'header_logo')) }}</a>
+            <a href="/">{{ HTML::image('img/logo.png', 'logo', array('id' => 'header_logo')) }}</a>
         </div>
 
         <div class="col-sm-6 col-xs-12 header_right">
@@ -30,6 +30,7 @@
                                 <span>cart</span>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="/cart">My cart</a>
                                 <a class="dropdown-item" href="#">Empty cart</a>
                             </div>
                         </div>
