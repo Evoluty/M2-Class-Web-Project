@@ -10,14 +10,14 @@
                     <div class="col-sm-2 d-none d-sm-block"></div>
 
                     <div class="col-sm-8 col-xs-12">
-                        {{ Form::open(array('url' => '', 'class' => 'form-row input-group')) }}
+                        {{ Form::open(array('url' => '/products/search', 'class' => 'form-row input-group')) }}
                         <select class="custom-select input-group-prepend" name="category">
                             <option selected>All</option>
                             @foreach($categories as $category)
                                 <option>{{$category->name}}</option>
                             @endforeach
                         </select>
-                        <input type="text" name="keyword" aria-describedby="inputGroupAppend">
+                        <input type="text" name="search" aria-describedby="inputGroupAppend">
                         <button class="btn btn-default input-group-append" type="submit">
                             <i class="fas fa-search"></i>
                         </button>
@@ -34,7 +34,7 @@
                             </button>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="/cart">My cart</a>
-                                <a class="dropdown-item" href="#">Empty cart</a>
+                                <a class="dropdown-item" href="/cart/empty">Empty cart</a>
                             </div>
                         </div>
                     </div>

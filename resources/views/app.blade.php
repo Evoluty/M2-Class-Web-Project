@@ -10,7 +10,7 @@
     <title>Famous Fashion Store - @yield('title')</title>
 
     <!-- Styles -->
-    <link href="css/app.css" rel="stylesheet" type="text/css">
+    <link href="/css/app.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="http://www.clker.com/cliparts/d/d/A/1/m/i/texas-star-hi.png"/>
     <!-- Defered scripts -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
@@ -32,7 +32,7 @@
     @include('footer')
 
     <!-- Scripts -->
-    <script src="js/app.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 
 </html>

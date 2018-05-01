@@ -35,10 +35,21 @@ class CartController extends Controller
 
     public function addItem($itemId)
     {
-        DB::table('user_cart')->insert([
-            'user_id' => Auth::id(),
-            'product_id' => $itemId
-        ]);
+        $row = DB::table('user_cart')
+            ->where('user_id', '=', Auth::id())
+            ->where('product_id', '=', $itemId);
+
+        if ($row->doesntExist()) {
+            DB::table('user_cart')->insert([
+                'user_id' => Auth::id(),
+                'product_id' => $itemId,
+                'count' => 1
+            ]);
+        } else {
+            $row->increment('count');
+        }
+
+        return redirect('/cart');
     }
 
     public function deleteItem($itemId)
@@ -46,10 +57,9 @@ class CartController extends Controller
         DB::table('user_cart')
             ->where('user_id', '=', Auth::id())
             ->where('product_id', '=', $itemId)
-            ->first()
             ->delete();
 
-        redirect('/cart');
+        return redirect('/cart');
     }
 
     public function empty()
@@ -57,5 +67,7 @@ class CartController extends Controller
         DB::table('user_cart')
             ->where('user_id', '=', Auth::id())
             ->delete();
+
+        return redirect('/cart');
     }
 }

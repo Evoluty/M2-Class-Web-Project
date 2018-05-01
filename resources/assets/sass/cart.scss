@@ -115,10 +115,11 @@ table {
 }
 
 div.products {
-  padding-top: 2rem;
+  padding-top: 1rem;
   text-align: center;
 
   img {
+    margin-top: 2.5rem;
     width: 15rem;
     height: 15rem;
     margin-bottom: 1.5rem;
@@ -128,6 +129,12 @@ div.products {
     .dropdown-item:hover {
       background-color: #e0e0e0;
       color: #282828;
+    }
+  }
+
+  .buttons {
+    > a:hover, > a:active, > a:focus {
+      text-decoration: none !important;
     }
   }
 

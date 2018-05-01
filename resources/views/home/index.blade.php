@@ -38,6 +38,6 @@
         </div>
 
         <h3>Our products</h3>
-        @include('products.index')
+        @include('products._partial')
     </div>
 @endsection
