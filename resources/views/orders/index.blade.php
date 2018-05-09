@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row">
                 @foreach ($orders as $order)
-                    <div class="col-3" style="margin-bottom: 1em">
+                    <div class="col-lg-3 col-sm-12" style="margin-bottom: 1em">
                         <div class="card border-dark" style="padding: 0; height: 100%">
                             <div class="card-header text-center" style="width: 100%;">{{$order['date']->format('d-m-Y')}} - ${{$order['total']}}</div>
                             <div class="card-body">
