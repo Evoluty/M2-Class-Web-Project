@@ -7,7 +7,8 @@
                 <div>{{$product->name}}</div>
                 <div>${{$product->price}}</div>
                 <div class="buttons">
-                    <a href="/cart/addItem/{{$product->id}}">
+                    <a class="button-add-product">
+                        <div class="container-id" style="display: none">{{$product->id}}</div>
                         <button type="button" class="btn btn-light" role="button">
                             <i class="fas fa-shopping-cart"></i>ADD TO CART
                         </button>

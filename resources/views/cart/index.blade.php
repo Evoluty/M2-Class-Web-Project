@@ -7,7 +7,7 @@
 
         <h3>Shopping Cart</h3>
 
-        {{ Form::open(array('url' => '')) }}
+        {{ Form::open(array('url' => '/products/orders')) }}
         <div class="container-fluid">
             <table class="table">
                 <thead>
@@ -45,7 +45,7 @@
                     <td class="col-sm-1 col-3">
                         <div><input type="text" name="keyword" value="{{$product->count}}"></div>
                         <div>
-                            <a href="/cart/updateNbItem/"><i class="fas fa-edit"></i></a>
+                            <a href="#" class="edit-product"><span style="display: none">{{$product->product_id}}</span><i class="fas fa-edit"></i></a>
                             <a href="/cart/deleteItem/{{$product->product_id}}"><i class="fas fa-trash-alt"></i>Remove Item</a>
                         </div>
                     </td>

@@ -38,7 +38,7 @@
         <div class="col-sm-4 container">
             <h4>Newsletter Signup</h4>
 
-            {{ Form::open(array('url' => '', 'class' => 'form-group', 'id' => 'newsletter-form')) }}
+            {{ Form::open(array('url' => '/newsletter', 'class' => 'form-group', 'id' => 'newsletter-form')) }}
             <div class="input-group">
                 <input type="text" name="email">
                 <button class="btn btn-default input-group-append" type="submit">

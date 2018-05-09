@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class CartController extends Controller
 {
@@ -17,11 +18,14 @@ class CartController extends Controller
 
         $cartProducts = DB::table('products')
             ->join('user_cart', 'products.id', '=', 'user_cart.product_id')
+            ->where('user_id', '=', Auth::id())
             ->get()->all();
 
         $suggestions = DB::table('products')
             ->whereNotIn('id',
-                DB::table('user_cart')->where('user_id', '=', Auth::id())->pluck('product_id')->all()
+                DB::table('user_cart')
+                    ->where('user_id', '=', Auth::id())
+                    ->pluck('product_id')->all()
             )->limit(4)
             ->get()->all();
 
@@ -49,7 +53,27 @@ class CartController extends Controller
             $row->increment('count');
         }
 
-        return redirect('/cart');
+        session([
+            $itemId => $row->get(['count'])->first()->count
+        ]);
+
+        return response([
+            'count' => DB::table('user_cart')->where('user_id', '=', Auth::id())->count()
+        ],200);
+    }
+
+    public function updateItem($itemId, $number)
+    {
+        DB::table('user_cart')
+            ->where('user_id', '=', Auth::id())
+            ->where('product_id', '=', $itemId)
+            ->update(['count' => $number]);
+
+        session([
+            $itemId => $number
+        ]);
+
+        return response(null, 204);
     }
 
     public function deleteItem($itemId)
@@ -59,6 +83,8 @@ class CartController extends Controller
             ->where('product_id', '=', $itemId)
             ->delete();
 
+        session()->forget($itemId);
+
         return redirect('/cart');
     }
 
@@ -67,6 +93,13 @@ class CartController extends Controller
         DB::table('user_cart')
             ->where('user_id', '=', Auth::id())
             ->delete();
+
+        $all_sessions = session()->all();
+        foreach(array_keys($all_sessions) as $key) {
+            if (is_numeric($key)) {
+                session()->forget($key);
+            }
+        }
 
         return redirect('/cart');
     }
