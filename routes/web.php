@@ -28,4 +28,6 @@ Route::post('/products/search', 'Products\SearchController@render')->middleware(
 Route::get('/my-account', 'Users\AccountController@render')->middleware('auth');
 Route::post('/products/orders', 'Store\OrderController@newOrder')->middleware('auth');
 
-Route::post('/newsletter', 'Users\NewsletterController@newSubscription');
+Route::post('/newsletter', 'Users\NewsletterController@newSubscription')->middleware('auth');
+
+Route::get('/products/bestseller/{itemId}/{count}', 'Products\BestSellers@addValueToItem');

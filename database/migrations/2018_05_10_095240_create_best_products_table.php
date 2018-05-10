@@ -15,7 +15,7 @@ class CreateBestProductsTable extends Migration
     {
         Schema::create('best_products', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('product_id');
+            $table->unsignedInteger('product_id')->unique();
             $table->unsignedInteger('count');
 
             $table->foreign('product_id')->references('id')->on('products');
