@@ -59,7 +59,8 @@
             <i class="fas fa-shopping-cart"></i>
         </button>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Empty cart</a>
+            <a class="dropdown-item" href="/cart">My cart</a>
+            <a class="dropdown-item" href="/cart/empty">Empty cart</a>
         </div>
     </div>
 </nav>
