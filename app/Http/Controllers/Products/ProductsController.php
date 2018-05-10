@@ -6,10 +6,16 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-class WomanController extends Controller
+class ProductsController extends Controller
 {
-    public function render()
+    public function render($category)
     {
+        $categoryOrm = DB::table('categories')->where('name', '=', $category)->get(['id'])->first();
+        if (empty($categoryOrm)) {
+            abort(404);
+        }
+        $categoryId = $categoryOrm->id;
+
         $numberItems = DB::table('user_cart')
             ->where('user_id', '=', Auth::id())
             ->count();
@@ -17,11 +23,11 @@ class WomanController extends Controller
         $categories = DB::table('categories')->get()->all();
 
         $allProducts = DB::table('products')
-            ->where('category_id', '=', 1)
+            ->where('category_id', '=', $categoryId)
             ->limit(20)->get()->all();
 
         return view('products.index', [
-            'category' => 'Woman',
+            'category' => 'Men',
             'cartNumberItems' => $numberItems,
             'categories' => $categories,
             'products' => $allProducts

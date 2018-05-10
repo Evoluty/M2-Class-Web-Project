@@ -17,16 +17,12 @@ Auth::routes();
 Route::get('/', 'HomeController@render')->middleware('auth');
 
 Route::get('/cart', 'CartController@render')->middleware('auth');
-Route::get('cart/addItem/{itemId}', 'CartController@addItem');
-Route::get('cart/empty', 'CartController@empty')->middleware('auth');
-Route::get('cart/updateItem/{itemId}/{number}', 'CartController@updateItem');
-Route::get('cart/deleteItem/{itemId}', 'CartController@deleteItem')->middleware('auth');
+Route::get('/cart/addItem/{itemId}', 'CartController@addItem');
+Route::get('/cart/empty', 'CartController@empty')->middleware('auth');
+Route::get('/cart/updateItem/{itemId}/{number}', 'CartController@updateItem');
+Route::get('/cart/deleteItem/{itemId}', 'CartController@deleteItem')->middleware('auth');
 
-Route::get('/products/woman', 'Products\WomanController@render')->middleware('auth');
-Route::get('/products/men', 'Products\MenController@render')->middleware('auth');
-Route::get('/products/sale', 'Products\SaleController@render')->middleware('auth');
-Route::get('/products/accessories', 'Products\AccessoriesController@render')->middleware('auth');
-Route::get('/products/vip', 'Products\VIPController@render')->middleware('auth');
+Route::get('/products/{category}', 'Products\ProductsController@render')->middleware('auth');
 Route::post('/products/search', 'Products\SearchController@render')->middleware('auth');
 
 Route::get('/my-account', 'AccountController@render')->middleware('auth');
