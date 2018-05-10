@@ -27,7 +27,7 @@ class ProductsController extends Controller
             ->limit(20)->get()->all();
 
         return view('products.index', [
-            'category' => 'Men',
+            'category' => ucfirst($category),
             'cartNumberItems' => $numberItems,
             'categories' => $categories,
             'products' => $allProducts
