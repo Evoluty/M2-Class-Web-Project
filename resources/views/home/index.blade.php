@@ -15,7 +15,7 @@
                     <div class="text-center">
                     @foreach($suggested as $item)
                         <div class="mySlides">
-                            <img src="{{$item->picture_url}}" style="width:50%; max-height: 25em">
+                            <img src="{{$item->picture_url}}" alt="{{$item->id}}" style="width:50%; max-height: 25em">
                         </div>
                     @endforeach
                     </div>
@@ -29,7 +29,7 @@
                 <div style="text-align:center">
                     @php $i = 1 @endphp
                     @foreach($suggested as $item)
-                        <img onclick="currentSlide({{$i}})" class="dot" src="{{$item->picture_url}}" alt="{{$item->name}}" width="80px" height="80px">
+                        <img onclick="currentSlide({{$i}})" class="dot" src="{{$item->picture_url}}" alt="{{$item->id}}" width="80px" height="80px">
                         @php $i++ @endphp
                     @endforeach
                 </div>
