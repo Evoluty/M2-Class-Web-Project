@@ -35,4 +35,33 @@ $(document).ready(function(){
 
         $($(this).parent()).parent().parent().children().last().html('$' + number * itemPrice);
     });
+
+    var cursorX = -1;
+    var cursorY = -1;
+    $(document).on('mousemove', function(event) {
+        cursorX = event.pageX;
+        cursorY = event.pageY;
+    });
+
+    function isInteger(str) {
+        var n = Math.floor(Number(str));
+        return n !== Infinity && String(n) === str && n >= 0;
+    }
+
+    function checkMouseHovered() {
+        setTimeout(function() {
+            if (cursorX !== -1 && cursorY !== -1) {
+                var elem = document.elementFromPoint(cursorX - window.pageXOffset, cursorY - window.pageYOffset);
+                var id = $(elem).attr("alt");
+
+                if (id !== null && isInteger(id)) {
+                    $.get('/products/bestseller/' + id);
+                }
+                $.get('/heatmap/' + cursorX + '/' + cursorY);
+            }
+            checkMouseHovered();
+        }, 1000);
+    }
+
+    checkMouseHovered();
 });

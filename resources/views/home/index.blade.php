@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="container-fluid">
-        <h3>Suggestions</h3>
+        <h3>Our best-sellers</h3>
         <div class="row">
             <div class="col-sm-2 d-none d-sm-block"></div>
             <div class="col-sm-8">
@@ -29,16 +29,14 @@
                 <div style="text-align:center">
                     @php $i = 1 @endphp
                     @foreach($suggested as $item)
-                        <span class="dot" onclick="currentSlide({{$i}})"></span>
+                        <img onclick="currentSlide({{$i}})" class="dot" src="{{$item->picture_url}}" alt="{{$item->name}}" width="80px" height="80px">
                         @php $i++ @endphp
                     @endforeach
                 </div>
             </div>
         </div>
 
-        <script src="js/caroussel.js">
-
-        </script>
+        <script src="js/caroussel.js"></script>
 
         <h3>Our products</h3>
         @include('products._partial')
