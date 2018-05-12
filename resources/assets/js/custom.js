@@ -24,6 +24,11 @@ $(document).ready(function(){
         });
     });
 
+    function precisionRound(number, precision) {
+        var factor = Math.pow(10, precision);
+        return Math.round(number * factor) / factor;
+    }
+
     $('.edit-product').click(function (event) {
         event.preventDefault();
 
@@ -33,7 +38,7 @@ $(document).ready(function(){
 
         $.get('/cart/updateItem/'+itemId+'/'+number, function(data) {});
 
-        $($(this).parent()).parent().parent().children().last().html('$' + number * itemPrice);
+        $($(this).parent()).parent().parent().children().last().html('$' + precisionRound(number * itemPrice, 2));
     });
 
     var cursorX = -1;
