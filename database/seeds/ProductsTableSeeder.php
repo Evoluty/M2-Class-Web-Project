@@ -24,7 +24,7 @@ class ProductsTableSeeder extends Seeder
         DB::table('products')->insert(['name' => 'Product Nine', 'price' => 23.45, 'category_id' => 3, 'picture_url' => 'https://nym.ag/2r8EL3A']);
         DB::table('products')->insert(['name' => 'Product Ten', 'price' => 56.43, 'category_id' => 3, 'picture_url' => 'https://bit.ly/2r8Oirn']);
 
-        DB::table('products')->insert(['name' => 'Product Eleven', 'price' => 9.56, 'category_id' => 4, 'picture_url' => 'https://bit.ly/2r4v06r']);
+        DB::table('products')->insert(['name' => 'Product Eleven', 'price' => 9.56, 'category_id' => 4, 'picture_url' => 'https://bit.ly/2KXjq5u']);
         DB::table('products')->insert(['name' => 'Product Twelve', 'price' => 4.56, 'category_id' => 4, 'picture_url' => 'https://bit.ly/2HYReR2']);
         DB::table('products')->insert(['name' => 'Product Thirteen', 'price' => 34.32, 'category_id' => 4, 'picture_url' => 'https://bit.ly/2HzTeQ4']);
 
