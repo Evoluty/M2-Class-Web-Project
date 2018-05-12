@@ -5,9 +5,9 @@ namespace App\Http\Controllers\Products;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 
-class BestSellers extends Controller
+class BestSellersController extends Controller
 {
-    public function addValueToItem($itemId, $count)
+    public function addValueToItem($itemId, $count = 1)
     {
         $item = DB::table('best_products')->where('product_id', '=', $itemId);
 

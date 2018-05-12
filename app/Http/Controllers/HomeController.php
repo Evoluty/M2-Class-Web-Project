@@ -17,9 +17,15 @@ class HomeController extends Controller
 
         $allProducts = DB::table('products')->limit(20)->get()->all();
 
+        $suggested = DB::table('products')
+            ->join('best_products', 'products.id', '=', 'best_products.product_id', 'LEFT')
+            ->orderByDesc('best_products.count')->orderBy('id')
+            ->limit(4)->get(['products.*', 'count'])->all();
+
         return view('home.index', [
             'cartNumberItems' => $numberItems,
             'categories' => $categories,
+            'suggested' => $suggested,
             'products' => $allProducts
         ]);
     }

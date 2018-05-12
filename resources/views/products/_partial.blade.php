@@ -3,7 +3,7 @@
 
         @foreach ($products as $product)
             <div class="col-sm-3">
-                <div><img src="{{$product->picture_url}}" alt="{{$product->name}}"></div>
+                <div><img src="{{$product->picture_url}}" alt="{{$product->id}}"></div>
                 <div>{{$product->name}}</div>
                 <div>${{$product->price}}</div>
                 <div class="buttons">

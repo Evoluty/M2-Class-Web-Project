@@ -13,4 +13,5 @@ yarn-error.log
 .env
 public/css/*
 public/js/*
+!public/js/caroussel.js
 .DS_Store

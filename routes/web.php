@@ -30,4 +30,5 @@ Route::post('/products/orders', 'Store\OrderController@newOrder')->middleware('a
 
 Route::post('/newsletter', 'Users\NewsletterController@newSubscription')->middleware('auth');
 
-Route::get('/products/bestseller/{itemId}/{count}', 'Products\BestSellers@addValueToItem');
+Route::get('/products/bestseller/{itemId}/{count?}', 'Products\BestSellersController@addValueToItem');
+Route::get('/heatmap/{x}/{y}', 'HeatmapController@newPosition');
